@@ -24,7 +24,7 @@ class InputDevice {
     }
 
     toString() {
-        return `${this.connectorType} ${this.brand}`;
+        return `ConnectorType= ${this.connectorType}, Brand= ${this.brand}`;
     }
 }
 
@@ -42,7 +42,7 @@ class Mouse extends InputDevice{
     }
 
     toString() {
-        return  `${this.mouseID}` + super.toString();
+        return  `ID= ${this.mouseID}, ` + super.toString();
     }
 }
 
@@ -60,7 +60,7 @@ class Keyboard extends InputDevice{
     }
 
     toString() {
-        return  `${this.keyboardID}` + super.toString();
+        return  `ID= ${this.keyboardID}, ` + super.toString();
     }
 }
 
@@ -97,7 +97,7 @@ class Monitor {
     }
 
     toString() {
-        return `${this.monitorID} ${this.brand} ${this.inches}`;
+        return `ID= ${this.monitorID}, Brand= ${this.brand}, Inches= ${this.inches}`;
     }
 }
 
@@ -154,7 +154,10 @@ class Computer {
     }
 
     toString() {
-        return `${this.computerID} ${this.name} ${this.mouse.toString()} ${this.keyboard.toString()} ${this.monitor.toString()}`;
+        return `\nComputerID: ${this.computerID} Name: ${this.name}
+        Mouse: {${this.mouse.toString()}}
+        Keyboard: {${this.keyboard.toString()}}
+        Monitor: {${this.monitor.toString()}}`;
     }
 }
 
